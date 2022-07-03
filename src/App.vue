@@ -1,45 +1,20 @@
 <template>
-  <v-app>
-  <h1>Hello world</h1>
-    <v-main>
-      <v-menu offset-y>
-        <v-btn>
-          Dropdown
-        </v-btn>
-        <v-list>
-          <v-list-tile>
-            <v-list-tile-title>Choice 1</v-list-tile-title>
-          </v-list-tile>
-          <v-list-tile>
-            <v-list-tile-title>Choice 1</v-list-tile-title>
-          </v-list-tile>
-        </v-list>
-      </v-menu>
-      
-      <v-btn color="secondary">Click me!</v-btn>
-    </v-main>
-  </v-app>
+  <v-container>
+    <CrimeList msg="Welcome to Your Vue.js + TypeScript App"/>
+  </v-container>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script lang="ts">
+import Vue from 'vue';
+import CrimeList from '@/components/CrimeList.vue'; // @ is an alias to /src
 
-nav {
-  padding: 30px;
-}
+export default Vue.extend({
+  name: 'HomeView',
+  components: {
+    CrimeList,
+  },
+});
+</script>
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+<style lang="scss" scoped>
 </style>
